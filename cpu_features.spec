@@ -2,7 +2,7 @@ Summary:	A cross platform C99 library to get CPU features at runtime
 Summary(pl.UTF-8):	Wieloplatformowa biblioteka C99 do sprawdzania funkcjonalności CPU w czasie działania
 Name:		cpu_features
 Version:	0.9.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries
 #Source0Download: https://github.com/google/cpu_features/releases
@@ -37,7 +37,8 @@ Pliki nagłówkowe biblioteki cpu_features.
 %setup -q
 
 %build
-%cmake -B build
+%cmake -B build \
+	-DBUILD_TESTING=OFF
 
 %{__make} -C build
 
